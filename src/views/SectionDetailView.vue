@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <AppHeader />
+    <AppHeader :is-detail="true" />
     
     <main class="main-container">
       <div class="top-nav">

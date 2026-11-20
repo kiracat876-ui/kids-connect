@@ -1,16 +1,17 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <img :src="logoSrc" alt="" class="header__logo-img" />
+      <!-- Подставляем нужную картинку в зависимости от пропса isDetail -->
+      <img :src="isDetail ? '/kids-connect/logo-detail.png' : '/kids-connect/logo.png'" alt="KidsConnect" class="header__logo-img" />
     </div>
   </header>
 </template>
 
 <script setup>
 defineProps({
-  logoSrc: {
-    type: String,
-    default: '/logo.png'
+  isDetail: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
